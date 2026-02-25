@@ -1,0 +1,211 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+/* cabecera */
+header {
+    background: linear-gradient(90deg, #E0463E, #ff4b2b);
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* menus */
+nav {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 12px;
+}
+
+nav a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #ff416c;
+    color: white;
+}
+
+/* CONTENIDO */
+main {
+    padding: 30px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: #00eaff;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* tarjetas de los articulos */
+article {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+article h3 {
+    color: #ffdd57;
+    margin-bottom: 10px;
+}
+
+/* PSEUDO-ELEMENTO */
+article p::first-letter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00eaff;
+}
+
+/* GRID */
+.grid {
+    display: block;
+}
+
+/* pie de la pagina */
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .grid {
+        display: flex;
+        gap: 25px;
+    }
+
+    article {
+        flex: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+/* IMÁGENES DE JUEGOS */
+article img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+/* Pagina de iniciar sesino */
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.login label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.login button {
+    width: 100%;
+    padding: 12px;
+    background: #ff416c;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login button:hover {
+    background: #ff4b2b;
+}
+
+.login .nota {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #ccc;
+}
+/* IMÁGENES EN LA PÁGINA DE JUEGOS */
+.grid article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.grid article img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
