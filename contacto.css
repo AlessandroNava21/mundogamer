@@ -1,0 +1,100 @@
+/* Pagina de iniciar sesino */
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.login label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.login button {
+    width: 100%;
+    padding: 12px;
+    background: #ff416c;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login button:hover {
+    background: #ff4b2b;
+}
+
+.login .nota {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #ccc;
+}
+
+nav {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 12px;
+}
+
+nav a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #ff416c;
+    color: white;
+}
+/* GENERAL */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+/* cabecera */
+header {
+    background: linear-gradient(90deg, #E0463E, #ff4b2b);
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
