@@ -13,9 +13,9 @@ body {
     line-height: 1.6;
 }
 
-/* cabecera */
+/* CABECERA */
 header {
-    background: linear-gradient(90deg, #E0463E, #ff4b2b);
+    background: linear-gradient(90deg, #0cbbf5, #07a9f4);
     text-align: center;
     padding: 25px 15px;
 }
@@ -30,7 +30,7 @@ header p {
     opacity: 0.9;
 }
 
-/* menus */
+/* MENÚ */
 nav {
     background-color: #111;
     display: flex;
@@ -49,7 +49,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #ff416c;
+    background-color: #12a4f3;
     color: white;
 }
 
@@ -64,13 +64,13 @@ section {
     margin-bottom: 40px;
 }
 
-section h2 {
+section h2,
+section h3 {
     color: #00eaff;
-    margin-bottom: 20px;
-    font-size: 1.8rem;
+    margin-bottom: 15px;
 }
 
-/* tarjetas de los articulos */
+/* TARJETAS */
 article {
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(6px);
@@ -78,31 +78,43 @@ article {
     margin-bottom: 20px;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 article:hover {
     transform: translateY(-5px);
 }
 
-article h3 {
-    color: #ffdd57;
-    margin-bottom: 10px;
-}
-
-/* PSEUDO-ELEMENTO */
+/* PRIMERA LETRA */
 article p::first-letter {
     font-size: 1.5rem;
     font-weight: bold;
     color: #00eaff;
 }
 
-/* GRID */
-.grid {
-    display: block;
+/* IMÁGENES RESPONSIVE (SE ADAPTAN SIEMPRE) */
+article img {
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* pie de la pagina */
+article img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+/* GRID (para juegos) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* PIE DE PÁGINA */
 footer {
     background-color: #111;
     text-align: center;
@@ -113,18 +125,11 @@ footer {
 }
 
 /* RESPONSIVE */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .grid {
-        display: flex;
-        gap: 25px;
+        grid-template-columns: 1fr;
     }
 
-    article {
-        flex: 1;
-    }
-}
-
-@media (max-width: 600px) {
     header h1 {
         font-size: 2rem;
     }
@@ -132,40 +137,5 @@ footer {
     nav {
         flex-wrap: wrap;
         gap: 10px;
-    }
-}
-/* IMÁGENES DE JUEGOS */
-article img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-/* IMÁGENES EN LA PÁGINA DE JUEGOS */
-.grid article img {
-    width: 400px;
-    height: 400px;
-    display: block;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.grid article img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
-}
-/*Visualizacion de algunos elementos que me dan toc*/
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
     }
 }
