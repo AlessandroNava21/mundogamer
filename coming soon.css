@@ -1,0 +1,48 @@
+
+
+.coming-container {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Texto gigante */
+.coming-text {
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: 8px;
+    color: #ffdd57;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(255, 221, 87, 0.8);
+    animation: pulse 2s infinite alternate;
+}
+
+/* Subtexto */
+.coming-subtext {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #ccc;
+    text-align: center;
+}
+
+/* Animación suave */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    to {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .coming-text {
+        font-size: 3rem;
+        letter-spacing: 4px;
+    }
+}

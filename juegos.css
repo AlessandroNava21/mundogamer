@@ -1,0 +1,58 @@
+/* ===================================== */
+/* ESTILO ESPECÍFICO PÁGINA JUEGOS */
+/* ===================================== */
+
+/* Grid más moderno */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Tarjetas más equilibradas */
+.grid article {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen perfectamente adaptada */
+.grid article img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Zoom elegante */
+.grid article:hover img {
+    transform: scale(1.05);
+}
+
+/* Efecto tarjeta */
+.grid article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* Títulos centrados */
+.grid article h3 {
+    text-align: center;
+    margin-top: 15px;
+    color: #ffdd57;
+}
+
+/* Texto centrado */
+.grid article p {
+    text-align: center;
+    padding: 0 15px 20px 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
