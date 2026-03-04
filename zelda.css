@@ -1,4 +1,3 @@
-
 /* Imagen principal estilo épico */
 article img {
     width: 100%;
@@ -17,7 +16,8 @@ article {
 
 /* Títulos principales */
 article h2 {
-    color: #f1c40f; /* dorado */
+    color: #f1c40f;
+    /* dorado */
     font-size: 2rem;
     margin-bottom: 15px;
 }
@@ -38,7 +38,8 @@ article ul {
 article ul li {
     margin-bottom: 10px;
     font-size: 1.05rem;
-    color: #a9dfbf; /* verde claro */
+    color: #a9dfbf;
+    /* verde claro */
 }
 
 /* Primera letra estilo fantasía */
